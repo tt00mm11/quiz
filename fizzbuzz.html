@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>FizzBuzz問題</h1>
+
+  <div id="result"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+
+    
+   
+    
+    
+    
+    // まずはconsoleに表示してみよう！
+
+    //自分の
+// // 1 から 100 の数値」を console に出力する．
+// for (let number =1; number <= 100; number++){
+// // 「3 の倍数かつ 5 の倍数の場合」に「FizzBuzz」を出力する．
+// if(number %3 === 0 && number %5 === 0){
+//   console.log("FizzBuzz");
+// // 「3 の倍数の場合」に「Fizz」を出力する．
+//   }else if(number %3 === 0){
+//    console.log("Fizz");
+// // 「5 の倍数の場合」に「Buzz」を出力する．
+//   }else if(number %5 === 0){
+//    console.log("Buzz");
+//   }else{
+// // 処理結果を画面に表示する処理をつくる．
+//    console.log(number);
+//   }};
+  
+// こうちゃんコード
+
+//  for(let i =1; i<=100; i++) {
+//    if(i%3 === 0 && i%5 === 0){
+//    console.log('FizzBizz');
+// }else if(i%3 === 0){
+//   console.log('Fizz');
+// }else if(i%5 === 0){
+//   console.log('Bizz');
+// }else{
+//   console.log(i);
+// }};
+
+
+// タロさんコード
+// for(let i=1; i<=100; i++){
+//   if(i%15===0){
+//     console.log('FizzBuss');
+//   }else if(i%5===0){
+//    console.log('Fizz');
+//   }else if(i%3===0){
+//     console.log(i);
+// }};
+
+
+//キヨちゃんコード
+
+  // let result = 0;
+
+  // for (let i = 1; i<100; i++) {
+  //   if (i%3 === 0 && i%5 ===0){
+  //     result = 'FizzBizz';
+  //   }else if (i%3 === 0 && i%5 !== 0){
+  //     result = 'Fizz';      
+  //     }else if (i%3 !== 0 && i%5===0){
+  //       result ="Buzz";
+  //     }else{
+  //       result =i;
+  //     }console.log(result);
+  // }
+
+
+//まゆちゃんコード
+//    const min =0;
+//    const max =100;
+
+// for(i =min; i <= max; i++)
+// {if(i===0)
+// {console.log('-');
+// }else if(i%15 === 0){
+//   console.log('FizzBuzz');
+// }else if (i%3 === 0){
+//   console.log('Fizz');
+// }else if (i%5 === 0){
+//   console.log('Buzz');
+// }else{
+//   console.log(i);
+// }}
+
+// // あっちゃんコード
+// const numbers = [];
+
+// for(let i =1; i <= 100; i++){
+//   if(i%3 === 0 && i%5 === 0){
+//     numbers.push('FizzBuzz');
+//   }else if (i%3 === 0){
+//     numbers.push('Fizz');
+//   }else if(i%5 === 0){
+//     numbers.push('Buzz');
+//   }else{
+//     numbers.push(i);
+//   }
+// }
+
+// numbers.forEach(number => {
+//   console.log(number);
+// });
+
+// タロ先生コード
+
+// for(let i = 1; i <= 100; i++){
+//   console.log(i%15 === 0? 'FizzBuzz': i%5===0?'Buzz':i%3===0?'fizz':i);
+// }
+
+const FizzBuzzArray = [...new Array(100).keys()]
+.map((x) => x +1)
+.map((x) => 
+   x%15 === 0
+   ? 'FizzBuzz'
+   : x %5 === 0
+   ?'Buzz'
+   : x %3 === 0
+   ?'fizz'
+   :x);
+
+console.log(FizzBuzzArray);
+FizzBuzzArray.forEach((x) => {
+ console.log(x);
+});
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

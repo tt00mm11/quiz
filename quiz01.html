@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <h1>Quiz初級編</h1>
+
+  <p id="question"></p>
+
+  <ul>
+    <li><button id="answer00">0</button></li>
+    <li><button id="answer01">1</button></li>
+    <li><button id="answer02">2</button></li>
+  </ul>
+
+  <p>結果</p>
+  <p id="result"></p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+
+    const quiz = {//問題
+      question: "APPLEはどれか",//問題文
+      answers: ["りんご", "バナナ", "みかん"],//選択肢
+      correct: 0,//あってる番号（左から順番）
+    };
+// 1.問題文表示
+    $("#question").text(quiz.question);//questionをquestion idに代入
+// 2.選択肢表示
+   $("#answer00").text(quiz.answers[0]);//answerをanswer00 idにtextで代入
+   $("#answer01").text(quiz.answers[1]);
+   $("#answer02").text(quiz.answers[2]);
+// 3."value"の設定
+   $("#answer00").val(0);//配列の0をval（中に入力するため）で”id answer00"に代入※文字列のみ仕込める
+   $("#answer01").val(1);
+   $("#answer02").val(2);
+
+
+//条件分岐でクリックしたら正解不正解を出す
+   $("button").on("click",function (e) {//1.2.3.を使って
+    console.log(e.target.value);
+   if (Number(e.target.value) === quiz.correct) {//正解の表示
+   $("#result").text("正解");//”正解”をresult idに表示
+   } else {//出なければ
+   $("#result").text("不正解");//”不正解”をresult idに表示
+   }
+  });
+
+  </script>
+</body>
+
+</html>
